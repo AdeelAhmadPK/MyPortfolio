@@ -201,15 +201,6 @@ export const countries: Country[] = [
     ])
   },
   {
-    name: "Brazil",
-    code: "br",
-    slug: "br",
-    flag: "🇧🇷",
-      "Naga", "Legazpi", "Roxas", "Puerto Princesa", "Tagbilaran", "Dipolog", "Pagadian", "Ozamiz", "Cotabato", "Kidapawan",
-      "Tacurong", "Koronadal", "General Santos", "Davao City", "Tagum", "Panabo", "Digos", "Mati", "Malaybalay", "Valencia"
-    ])
-  },
-  {
     name: "Vietnam",
     code: "vn",
     slug: "vn",
