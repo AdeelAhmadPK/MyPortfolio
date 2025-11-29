@@ -1,0 +1,16 @@
+node_modules
+Build/
+*.xlsx
+*.backup
+*.ps1
+*.zip
+*.log
+*.webp
+*.png
+*.jpg
+*.jpeg
+*.gif
+temp_cms_faqs.txt
+tsconfig.tsbuildinfo
+Green-Modern-and-Minimalistic-Travel-Typography-Logo-2-e1746216657724.png.bv (1).webp
+Seo_broad-match_us_2025-11-23.xlsx
