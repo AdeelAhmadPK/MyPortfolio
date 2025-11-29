@@ -1,0 +1,80 @@
+// Country codes mapping
+export const countryCodes = [
+  'pak', 'usa', 'uk', 'ca', 'au', 'de', 'fr', 'in', 'ae', 'sg', 'jp', 'br', 'es', 'it', 'nl', 'se', 'no', 'dk',
+  'fi', 'pl', 'pt', 'gr', 'cz', 'ro', 'hu', 'at', 'be', 'ch', 'ie', 'nz', 'mx', 'ar', 'cl', 'co', 'pe',
+  'za', 'ng', 'eg', 'ke', 'ma', 'gh', 'tn', 'ug', 'et', 'tz', 'dz', 'ao', 'sd', 'cm', 'ci', 'sn', 'zw',
+  'cn', 'kr', 'th', 'vn', 'ph', 'id', 'my', 'bd', 'pk', 'lk', 'mm', 'kh', 'np', 'af', 'uz', 'kz', 'ge',
+  'am', 'az', 'kg', 'tj', 'tm', 'mn', 'bt', 'la', 'bn', 'mv', 'tl', 'mo', 'hk', 'tw', 'jo', 'lb', 'sy',
+  'iq', 'ye', 'om', 'kw', 'qa', 'bh', 'sa', 'il', 'ps', 'cy', 'tr', 'ir', 'ru', 'ua', 'by', 'md', 'lt',
+  'lv', 'ee', 'ba', 'hr', 'rs', 'si', 'mk', 'al', 'me', 'xk', 'bg', 'sk', 'is', 'lu', 'mt', 'mc', 'ad',
+  'sm', 'va', 'li', 'gi', 'fo', 'ax', 'gg', 'je', 'im', 've', 'uy', 'py', 'bo', 'ec', 'sr', 'gy', 'gf',
+  'fk', 'bz', 'gt', 'hn', 'sv', 'ni', 'cr', 'pa', 'cu', 'jm', 'ht', 'do', 'pr', 'tt', 'bb', 'gd', 'lc',
+  'vc', 'ag', 'dm', 'kn', 'bs', 'bm', 'ky', 'tc', 'vg', 'vi', 'aw', 'cw', 'sx', 'bq', 'mq', 'gp', 'pm'
+]
+
+const countryMap: Record<string, string> = {
+  'pak': 'Pakistan',
+  'usa': 'United States',
+  'uk': 'United Kingdom',
+  'ca': 'Canada',
+  'au': 'Australia',
+  'de': 'Germany',
+  'fr': 'France',
+  'in': 'India',
+  'ae': 'United Arab Emirates',
+  'sg': 'Singapore',
+  'jp': 'Japan',
+  'br': 'Brazil',
+  'es': 'Spain',
+  'it': 'Italy',
+  'nl': 'Netherlands',
+  'se': 'Sweden',
+  'no': 'Norway',
+  'dk': 'Denmark',
+  'fi': 'Finland',
+  'pl': 'Poland',
+  'pt': 'Portugal',
+  'gr': 'Greece',
+  'cz': 'Czech Republic',
+  'ro': 'Romania',
+  'hu': 'Hungary',
+  'at': 'Austria',
+  'be': 'Belgium',
+  'ch': 'Switzerland',
+  'ie': 'Ireland',
+  'nz': 'New Zealand',
+  'mx': 'Mexico',
+  'ar': 'Argentina',
+  'cl': 'Chile',
+  'co': 'Colombia',
+  'pe': 'Peru',
+  'za': 'South Africa',
+  'ng': 'Nigeria',
+  'eg': 'Egypt',
+  'ke': 'Kenya',
+  'ma': 'Morocco',
+  'gh': 'Ghana',
+  'cn': 'China',
+  'kr': 'South Korea',
+  'th': 'Thailand',
+  'vn': 'Vietnam',
+  'ph': 'Philippines',
+  'id': 'Indonesia',
+  'my': 'Malaysia',
+  'bd': 'Bangladesh',
+  'pk': 'Pakistan',
+  'lk': 'Sri Lanka',
+  'tr': 'Turkey',
+  'ru': 'Russia',
+  'ua': 'Ukraine',
+  'il': 'Israel',
+  'sa': 'Saudi Arabia',
+}
+
+export function getCountryFromCode(code: string): string | undefined {
+  return countryMap[code]
+}
+
+export function getAllCountryCodes(): string[] {
+  return countryCodes
+}

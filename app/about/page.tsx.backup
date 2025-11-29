@@ -1,0 +1,779 @@
+import { Metadata } from 'next'
+import Link from 'next/link'
+import Image from 'next/image'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import { countries } from '@/data/locations'
+import { FaQuoteLeft, FaRocket, FaLightbulb, FaHeart, FaGraduationCap, FaBriefcase, FaTrophy, FaUsers, FaChartLine, FaCode, FaSearch, FaPalette, FaLinkedin, FaFacebook, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaClock, FaCoffee, FaLaptopCode, FaBookOpen, FaMountain } from 'react-icons/fa';
+
+export const metadata: Metadata = {
+  title: 'About Muhammad Adeel - My Journey in SEO | Personal Story & Professional Experience',
+  description: 'Get to know Muhammad Adeel, a passionate SEO specialist who loves helping businesses grow online. Discover my story, experience working with 250+ clients across 90+ countries, and why I\'m dedicated to making SEO simple and effective for everyone.',
+  keywords: 'Muhammad Adeel, about Muhammad Adeel, Muhammad Adeel story, SEO specialist, professional SEO consultant, semantic SEO expert, digital marketing expert, SEO journey, personal background',
+  alternates: {
+    canonical: 'https://adeelahmad.com/about',
+  },
+  openGraph: {
+    title: 'About Muhammad Adeel - SEO Specialist & Digital Marketing Expert',
+    description: 'Meet Muhammad Adeel: A passionate SEO specialist helping businesses succeed online with 8+ years of experience and 250+ successful projects worldwide.',
+    type: 'profile',
+    url: 'https://adeelahmad.com/about',
+    images: [{
+      url: '/MuhammadAdeelSEO.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Muhammad Adeel - SEO Specialist',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Muhammad Adeel - SEO Specialist',
+    description: 'Passionate SEO specialist helping businesses grow online through semantic SEO and data-driven strategies.',
+    images: ['/MuhammadAdeelSEO.jpg'],
+  },
+}
+
+// Core values that drive my work
+const coreValues = [
+  {
+    icon: <FaHeart className="w-8 h-8" />,
+    title: 'Passion-Driven',
+    description: 'I genuinely love what I do. Every project is an opportunity to help a business grow and succeed online.'
+  },
+  {
+    icon: <FaLightbulb className="w-8 h-8" />,
+    title: 'Innovation First',
+    description: 'Staying ahead of algorithm updates and industry trends to deliver cutting-edge SEO strategies.'
+  },
+  {
+    icon: <FaUsers className="w-8 h-8" />,
+    title: 'Client Success',
+    description: 'Your success is my success. I measure my achievements by the growth and results you see.'
+  },
+  {
+    icon: <FaRocket className="w-8 h-8" />,
+    title: 'Results-Focused',
+    description: 'No fluff, no empty promises. Just proven strategies that deliver real, measurable results.'
+  },
+];
+
+// My journey milestones
+const journeyMilestones = [
+  {
+    year: '2017',
+    title: 'The Beginning',
+    description: 'Started my SEO journey driven by curiosity about how websites rank on Google. Spent countless hours learning and experimenting.',
+    icon: <FaBookOpen className="w-6 h-6" />
+  },
+  {
+    year: '2019',
+    title: 'First Major Success',
+    description: 'Helped a local business achieve 300% organic traffic growth. This success fueled my passion and proved the power of strategic SEO.',
+    icon: <FaRocket className="w-6 h-6" />
+  },
+  {
+    year: '2021',
+    title: 'Going Global',
+    description: 'Expanded to working with international clients across multiple continents. Learned the nuances of global SEO and localization.',
+    icon: <FaMapMarkerAlt className="w-6 h-6" />
+  },
+  {
+    year: '2023',
+    title: 'Semantic SEO Expert',
+    description: 'Mastered Koray Tuğberk GÜBÜR\'s semantic SEO methodology. This framework revolutionized how I approach optimization.',
+    icon: <FaLightbulb className="w-6 h-6" />
+  },
+  {
+    year: '2025',
+    title: 'Today',
+    description: 'Working with 250+ businesses across 90+ countries, continuously learning, and helping businesses dominate their markets.',
+    icon: <FaTrophy className="w-6 h-6" />
+  },
+];
+
+// What I love doing
+const passions = [
+  { icon: <FaLaptopCode className="w-6 h-6" />, text: 'Solving complex SEO challenges' },
+  { icon: <FaChartLine className="w-6 h-6" />, text: 'Watching clients\' rankings soar' },
+  { icon: <FaCoffee className="w-6 h-6" />, text: 'Coffee-fueled strategy sessions' },
+  { icon: <FaBookOpen className="w-6 h-6" />, text: 'Learning new SEO techniques' },
+  { icon: <FaUsers className="w-6 h-6" />, text: 'Building long-term partnerships' },
+  { icon: <FaMountain className="w-6 h-6" />, text: 'Helping businesses overcome obstacles' },
+];
+
+export default function AboutPage() {
+  // Get top countries for global presence section
+  const topCountries = countries.slice(0, 12);
+  
+  // Structured Data (JSON-LD) for Muhammad Adeel - SEO Specialist Entity
+  const personSchema = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://adeelahmad.com/about#muhammad-adeel",
+    "name": "Muhammad Adeel",
+    "alternateName": "Adeel Ahmad",
+    "description": "Professional SEO specialist and search engine optimization consultant with 8+ years of experience in semantic SEO, technical SEO, local SEO, and digital marketing. Expert in Koray Tuğberk GÜBÜR's semantic SEO methodology, topical authority building, and entity optimization.",
+    "url": "https://adeelahmad.com",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://adeelahmad.com/MuhammadAdeelSEO.jpg",
+      "caption": "Muhammad Adeel - Professional SEO Specialist"
+    },
+    "jobTitle": "SEO Specialist & Digital Marketing Consultant",
+    "hasOccupation": [
+      {
+        "@type": "Occupation",
+        "name": "SEO Specialist",
+        "description": "Search engine optimization expert specializing in semantic SEO and topical authority",
+        "occupationalCategory": "15-1299.09",
+        "skills": "Semantic SEO, Technical SEO, Local SEO, Link Building, Content Strategy, Entity Optimization, Topical Authority"
+      },
+      {
+        "@type": "Occupation",
+        "name": "SEO Consultant",
+        "description": "Professional search engine optimization consultant helping businesses improve Google rankings",
+        "skills": "SEO Strategy, SEO Audits, Competitor Analysis, Keyword Research, Google Analytics, Search Console"
+      },
+      {
+        "@type": "Occupation",
+        "name": "Digital Marketing Expert",
+        "description": "Digital marketing specialist with expertise in organic search optimization and content marketing",
+        "skills": "Digital Marketing Strategy, Content Marketing, Conversion Optimization, Analytics"
+      }
+    ],
+    "knowsAbout": [
+      "Search Engine Optimization",
+      "Semantic SEO",
+      "Technical SEO",
+      "Local SEO",
+      "E-commerce SEO",
+      "International SEO",
+      "Content Strategy",
+      "Link Building",
+      "Entity Optimization",
+      "Topical Authority",
+      "Koray Tuğberk GÜBÜR Semantic SEO Method",
+      "Google Algorithm Updates",
+      "Schema Markup",
+      "Core Web Vitals",
+      "Mobile SEO",
+      "Voice Search Optimization",
+      "Digital Marketing",
+      "Content Marketing",
+      "Google Analytics",
+      "Google Search Console"
+    ],
+    "email": "hello@adeelahmad.com",
+    "telephone": "+923231458064",
+    "sameAs": [
+      "https://www.linkedin.com/in/m-adeeliqbal",
+      "https://www.facebook.com/m.adeeliqbal644",
+      "https://wa.me/+923231458064"
+    ],
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Muhammad Adeel SEO Consulting"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "SEO Professional Training"
+    },
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Analytics 4 Certified",
+        "credentialCategory": "certificate"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "Google Ads Search Certified",
+        "credentialCategory": "certificate"
+      },
+      {
+        "@type": "EducationalOccupationalCredential",
+        "name": "SEMrush SEO Toolkit Certified",
+        "credentialCategory": "certificate"
+      }
+    ],
+    "seeks": {
+      "@type": "Demand",
+      "description": "SEO consulting projects, technical SEO audits, semantic SEO implementation, and enterprise SEO solutions"
+    },
+    "serviceArea": {
+      "@type": "AdministrativeArea",
+      "name": "Global - 90+ Countries"
+    },
+    "areaServed": countries.map(c => c.name),
+    "numberOfEmployees": "1-5",
+    "foundingDate": "2017"
+  };
+
+  const professionalServiceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "@id": "https://adeelahmad.com/#organization",
+    "name": "Muhammad Adeel - SEO Specialist",
+    "description": "Professional SEO services including semantic SEO, technical SEO, local SEO, and search engine optimization consulting",
+    "url": "https://adeelahmad.com",
+    "telephone": "+923231458064",
+    "email": "hello@adeelahmad.com",
+    "priceRange": "$$",
+    "areaServed": countries.map(c => ({ "@type": "Country", "name": c.name })),
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "SEO Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Semantic SEO Consulting",
+            "description": "Advanced semantic SEO services using Koray method for topical authority and entity optimization"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Technical SEO Audit",
+            "description": "Comprehensive technical SEO analysis and optimization"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO Services",
+            "description": "Local search optimization and Google Business Profile management"
+          }
+        }
+      ]
+    },
+    "founder": {
+      "@id": "https://adeelahmad.com/about#muhammad-adeel"
+    },
+    "employee": {
+      "@id": "https://adeelahmad.com/about#muhammad-adeel"
+    }
+  };
+  
+  return (
+    <>
+      <Header />
+      {/* Structured Data (JSON-LD) for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(professionalServiceSchema) }}
+      />
+      <main className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50/30 to-indigo-50/30 dark:from-slate-950 dark:via-blue-950/30 dark:to-indigo-950/30" itemScope itemType="https://schema.org/ProfilePage">
+        {/* Hero Section */}
+        <section className="relative py-20 sm:py-28 px-4 sm:px-6 lg:px-8 overflow-hidden">
+          {/* Animated Background */}
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-blob" />
+            <div className="absolute top-40 right-10 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+            <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-purple-500/20 rounded-full blur-3xl animate-blob animation-delay-4000" />
+          </div>
+          
+          <div className="relative max-w-7xl mx-auto">
+            {/* Breadcrumb */}
+            <nav className="flex justify-center mb-8" aria-label="Breadcrumb">
+              <ol className="inline-flex items-center space-x-2 text-sm">
+                <li><Link href="/" className="text-slate-500 hover:text-blue-600 transition-colors">Home</Link></li>
+                <li><span className="text-slate-400">/</span></li>
+                <li><span className="text-blue-600 font-medium">About</span></li>
+              </ol>
+            </nav>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Content */}
+              <div itemScope itemProp="mainEntity" itemType="https://schema.org/Person">
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 border border-blue-200/50 dark:border-blue-800/50 mb-6 backdrop-blur-sm">
+                  <span className="text-2xl">👋</span>
+                  <span className="text-sm font-semibold text-blue-700 dark:text-blue-300">Hello, I'm Muhammad Adeel</span>
+                </div>
+
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 dark:from-blue-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent">
+                    Transforming Businesses
+                  </span>
+                  <br />
+                  <span className="text-slate-900 dark:text-white">Through Semantic SEO</span>
+                </h1>
+                
+                <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed" itemProp="description">
+                  I'm <strong itemProp="name">Muhammad Adeel</strong>, a <strong>professional SEO specialist</strong> and <strong>search engine optimization consultant</strong> with over <strong>8 years of experience</strong> in digital marketing and SEO. 
+                  I've helped <strong>250+ businesses</strong> across <strong>{countries.length}+ countries</strong> achieve top Google rankings using <strong>semantic SEO strategies</strong>, 
+                  <strong>topical authority building</strong>, <strong>entity optimization</strong>, and <strong>Koray Tuğberk GÜBÜR's semantic SEO methodology</strong>. 
+                  As an <em>experienced SEO consultant</em>, I specialize in <em>technical SEO</em>, <em>local SEO</em>, <em>e-commerce SEO</em>, and <em>international search optimization</em>.
+                </p>
+
+                {/* Achievement Badges */}
+                <div className="flex flex-wrap gap-3 mb-8">
+                  <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-full shadow-lg border border-slate-100 dark:border-slate-800">
+                    <span className="text-xl">🏆</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">Google Certified</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-full shadow-lg border border-slate-100 dark:border-slate-800">
+                    <span className="text-xl">📈</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">250+ Projects</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-full shadow-lg border border-slate-100 dark:border-slate-800">
+                    <span className="text-xl">🌍</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{countries.length}+ Countries</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-white dark:bg-slate-900 px-4 py-2 rounded-full shadow-lg border border-slate-100 dark:border-slate-800">
+                    <span className="text-xl">⭐</span>
+                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">98% Client Satisfaction</span>
+                  </div>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link
+                    href="/contact"
+                    className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-xl font-semibold hover:shadow-xl transition-all duration-300 hover:scale-105"
+                  >
+                    <span>Let's Work Together</span>
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </Link>
+                  <Link
+                    href="/case-studies"
+                    className="inline-flex items-center justify-center gap-2 bg-white dark:bg-slate-800 text-slate-900 dark:text-white border-2 border-slate-200 dark:border-slate-700 px-8 py-4 rounded-xl font-semibold hover:border-blue-500 transition-all duration-300"
+                  >
+                    <span>View My Work</span>
+                  </Link>
+                </div>
+
+                {/* Structured Data for SEO - Person Schema */}
+                <meta itemProp="name" content="Muhammad Adeel" />
+                <meta itemProp="alternateName" content="Adeel Ahmad" />
+                <meta itemProp="jobTitle" content="SEO Specialist & Digital Marketing Consultant" />
+                <meta itemProp="description" content="Professional SEO specialist and search engine optimization expert with expertise in semantic SEO, topical authority, and entity optimization" />
+                <meta itemProp="url" content="https://adeelahmad.com" />
+                <meta itemProp="email" content="hello@adeelahmad.com" />
+                <meta itemProp="telephone" content="+923231458064" />
+                <meta itemProp="knowsAbout" content="Search Engine Optimization, Semantic SEO, Technical SEO, Local SEO, Content Strategy, Link Building, Digital Marketing, Google Algorithm Updates, Entity Optimization, Topical Authority, Koray Method" />
+                <meta itemProp="hasOccupation" content="SEO Specialist" />
+                <meta itemProp="hasOccupation" content="SEO Consultant" />
+                <meta itemProp="hasOccupation" content="Digital Marketing Expert" />
+                <link itemProp="sameAs" href="https://www.linkedin.com/in/m-adeeliqbal" />
+                <link itemProp="sameAs" href="https://www.facebook.com/m.adeeliqbal644" />
+                <link itemProp="image" href="/MuhammadAdeelSEO.jpg" />
+              </div>
+
+              {/* Right Content - Profile Card */}
+              <div className="relative">
+                <div className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 rounded-3xl p-1 shadow-2xl">
+                  <div className="bg-white dark:bg-slate-900 rounded-3xl p-8">
+                    <div className="relative w-48 h-48 mx-auto mb-6">
+                      <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-full animate-pulse" />
+                      <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl">
+                        <Image
+                          src="/MuhammadAdeelSEO.jpg"
+                          alt="Muhammad Adeel - Professional SEO Specialist and Search Engine Optimization Expert"
+                          fill
+                          className="object-cover"
+                          priority
+                          sizes="(max-width: 768px) 192px, 192px"
+                        />
+                      </div>
+                    </div>
+                    <h2 className="text-2xl font-bold text-center text-slate-900 dark:text-white mb-2" itemProp="name">Muhammad Adeel</h2>
+                    <p className="text-center text-blue-600 dark:text-blue-400 font-semibold mb-6" itemProp="jobTitle">SEO Specialist & Digital Marketing Expert</p>
+                    
+                    <div className="space-y-4">
+                      <div className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div className="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center">
+                          <svg className="w-5 h-5 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400">Email</p>
+                          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">hello@adeelahmad.com</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div className="w-10 h-10 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
+                          <svg className="w-5 h-5 text-green-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400">Location</p>
+                          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">Available Globally</p>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-slate-50 dark:bg-slate-800 rounded-xl">
+                        <div className="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/30 flex items-center justify-center">
+                          <svg className="w-5 h-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <div>
+                          <p className="text-xs text-slate-500 dark:text-slate-400">Experience</p>
+                          <p className="text-sm font-semibold text-slate-700 dark:text-slate-300">8+ Years in SEO</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Form Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 relative overflow-hidden">
+          <div className="absolute inset-0">
+            <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
+          </div>
+          <div className="relative max-w-4xl mx-auto">
+            <HeroContactForm 
+              title="Get Your Free SEO Audit"
+              subtitle="Discover what's holding your website back from page 1 rankings"
+              buttonText="Get Free Consultation"
+            />
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="group bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-800/30 rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🎯</div>
+                <div className="text-4xl font-black bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">8+</div>
+                <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">Years of Experience</div>
+              </div>
+              <div className="group bg-gradient-to-br from-indigo-50 to-indigo-100 dark:from-indigo-900/30 dark:to-indigo-800/30 rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🚀</div>
+                <div className="text-4xl font-black bg-gradient-to-r from-indigo-600 to-indigo-800 bg-clip-text text-transparent">250+</div>
+                <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">Projects Completed</div>
+              </div>
+              <div className="group bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/30 dark:to-purple-800/30 rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">😊</div>
+                <div className="text-4xl font-black bg-gradient-to-r from-purple-600 to-purple-800 bg-clip-text text-transparent">98%</div>
+                <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">Client Satisfaction</div>
+              </div>
+              <div className="group bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/30 dark:to-pink-800/30 rounded-2xl p-6 text-center transform hover:scale-105 transition-all duration-300 hover:shadow-xl">
+                <div className="text-4xl mb-3 group-hover:scale-110 transition-transform">🌍</div>
+                <div className="text-4xl font-black bg-gradient-to-r from-pink-600 to-pink-800 bg-clip-text text-transparent">{countries.length}+</div>
+                <div className="text-sm font-medium text-slate-600 dark:text-slate-400 mt-2">Countries Served</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* My Story Section - Enhanced */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-10">
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-blue-100 to-indigo-100 dark:from-blue-900/30 dark:to-indigo-900/30 text-blue-700 dark:text-blue-300 text-sm font-semibold mb-4">
+                📖 My Journey
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+                From Curiosity to Expertise
+              </h2>
+            </div>
+            
+            <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 shadow-xl border border-slate-100 dark:border-slate-800">
+              <div className="space-y-6 text-slate-600 dark:text-slate-300 leading-relaxed text-lg">
+                <p>
+                  <strong>Muhammad Adeel</strong>'s journey into <strong>search engine optimization</strong> began over <strong>8 years ago</strong> when I discovered how search engines 
+                  connect people with solutions. What started as curiosity evolved into a passion for understanding 
+                  the intricate relationship between <em>semantic signals</em>, <em>user intent</em>, <em>search algorithms</em>, and <em>Google's ranking factors</em>.
+                </p>
+                <p>
+                  As a <strong>professional SEO consultant</strong>, I've had the privilege of working with businesses across diverse industries—from <strong>local home service 
+                  companies</strong> to <strong>multinational enterprises</strong>—spanning <em>healthcare SEO</em>, <em>legal SEO</em>, 
+                  <em>e-commerce optimization</em>, <em>real estate digital marketing</em>, <em>SaaS SEO</em>, and <em>technology sector SEO</em>. Each project presented unique challenges and opportunities 
+                  to refine my <strong>SEO specialist</strong> approach and deliver measurable results.
+                </p>
+                <p>
+                  My <strong>SEO methodology</strong> is deeply influenced by <strong>Koray Tuğberk GÜBÜR's Semantic SEO framework</strong>, focusing on <em>entity-based SEO</em> and <em>semantic search optimization</em>. 
+                  Rather than chasing keywords, I focus on building <em>topical authority</em> through comprehensive 
+                  <em>content networks</em>, <em>entity optimization</em>, <em>contextual relevance</em>, and <em>semantic relationships</em>—creating sustainable 
+                  Google rankings that withstand algorithm updates like <strong>Google Helpful Content Update</strong>, <strong>Core Updates</strong>, and <strong>BERT/MUM algorithms</strong>.
+                </p>
+                <p>
+                  What drives <strong>Muhammad Adeel</strong> as an <strong>SEO expert</strong> is witnessing the tangible impact on my clients' businesses—increased <em>organic traffic</em>, higher 
+                  <em>conversion rates</em>, improved <em>search visibility</em>, and sustainable <em>business growth</em>. There's nothing more rewarding than helping a business owner 
+                  achieve their goals and watching their online presence flourish across global markets through strategic <strong>search engine optimization</strong>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Expertise Section - Enhanced */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 dark:from-indigo-900/30 dark:to-purple-900/30 text-indigo-700 dark:text-indigo-300 text-sm font-semibold mb-4">
+                🎯 Core Competencies
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                Areas of Expertise
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                Specialized in modern SEO methodologies that deliver sustainable, long-term results
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {expertiseAreas.map((item, index) => (
+                <div
+                  key={index}
+                  className="group bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-800/50 rounded-2xl p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-slate-200 dark:border-slate-700"
+                >
+                  <div className="text-4xl mb-4 group-hover:scale-110 transition-transform">{item.icon}</div>
+                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h3>
+                  <p className="text-slate-600 dark:text-slate-400 mb-4">{item.desc}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {item.skills.map((skill, skillIndex) => (
+                      <span
+                        key={skillIndex}
+                        className="text-xs px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 font-medium"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Global Presence Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-green-100 to-teal-100 dark:from-green-900/30 dark:to-teal-900/30 text-green-700 dark:text-green-300 text-sm font-semibold mb-4">
+                🌍 Worldwide Reach
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                Serving Clients Across {countries.length}+ Countries
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                From local businesses to international enterprises, delivering localized SEO strategies worldwide
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-8">
+              {topCountries.map((country) => (
+                <Link
+                  key={country.code}
+                  href={`/${country.slug}`}
+                  className="group flex items-center gap-3 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-lg hover:bg-blue-50 dark:hover:bg-blue-900/30 transition-all duration-300"
+                >
+                  <span className="text-2xl">
+                    {country.code === 'US' ? '🇺🇸' : 
+                     country.code === 'GB' ? '🇬🇧' : 
+                     country.code === 'CA' ? '🇨🇦' : 
+                     country.code === 'AU' ? '🇦🇺' :
+                     country.code === 'DE' ? '🇩🇪' :
+                     country.code === 'FR' ? '🇫🇷' :
+                     country.code === 'JP' ? '🇯🇵' :
+                     country.code === 'IN' ? '🇮🇳' : '🌍'}
+                  </span>
+                  <span className="font-medium text-slate-700 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {country.name}
+                  </span>
+                </Link>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Link
+                href="/services"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                <span>See All {countries.length}+ Countries</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Certifications & Skills - Enhanced */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+          <div className="max-w-7xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-yellow-100 to-orange-100 dark:from-yellow-900/30 dark:to-orange-900/30 text-yellow-700 dark:text-yellow-300 text-sm font-semibold mb-4">
+                🏆 Credentials
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">
+                Certifications & Tools
+              </h2>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Certifications */}
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-800">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">🏆</span>
+                  Industry Certifications
+                </h3>
+                <ul className="space-y-4">
+                  {[
+                    { cert: 'Google Analytics 4 Certified', org: 'Google' },
+                    { cert: 'Google Ads Search Certified', org: 'Google' },
+                    { cert: 'SEMrush SEO Toolkit Certified', org: 'SEMrush Academy' },
+                    { cert: 'HubSpot Content Marketing Certified', org: 'HubSpot' },
+                    { cert: 'Yoast SEO Academy Certified', org: 'Yoast' },
+                    { cert: 'Ahrefs SEO Essentials Certified', org: 'Ahrefs Academy' },
+                  ].map((item, index) => (
+                    <li key={index} className="flex items-start gap-3 bg-white dark:bg-slate-800 p-3 rounded-xl">
+                      <svg className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <div>
+                        <span className="font-semibold text-slate-700 dark:text-slate-300">{item.cert}</span>
+                        <span className="text-xs block text-slate-500 dark:text-slate-400">{item.org}</span>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Tools & Technologies */}
+              <div className="bg-gradient-to-br from-purple-50 to-pink-50 dark:from-purple-950/30 dark:to-pink-950/30 rounded-2xl p-8 border border-purple-100 dark:border-purple-800">
+                <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-3">
+                  <span className="text-3xl">🛠️</span>
+                  Tools & Technologies
+                </h3>
+                <div className="flex flex-wrap gap-3">
+                  {[
+                    { name: 'Google Search Console', category: 'analytics' },
+                    { name: 'SEMrush', category: 'seo' },
+                    { name: 'Ahrefs', category: 'seo' },
+                    { name: 'Screaming Frog', category: 'technical' },
+                    { name: 'Google Analytics 4', category: 'analytics' },
+                    { name: 'Moz Pro', category: 'seo' },
+                    { name: 'Surfer SEO', category: 'content' },
+                    { name: 'Clearscope', category: 'content' },
+                    { name: 'GTmetrix', category: 'technical' },
+                    { name: 'PageSpeed Insights', category: 'technical' },
+                    { name: 'Google Tag Manager', category: 'analytics' },
+                    { name: 'Looker Studio', category: 'analytics' },
+                  ].map((tool, index) => (
+                    <span
+                      key={index}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold shadow-md hover:shadow-lg transition-shadow ${
+                        tool.category === 'analytics' ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300' :
+                        tool.category === 'seo' ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300' :
+                        tool.category === 'technical' ? 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300' :
+                        'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
+                      }`}
+                    >
+                      {tool.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section with Schema */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-pink-100 to-rose-100 dark:from-pink-900/30 dark:to-rose-900/30 text-pink-700 dark:text-pink-300 text-sm font-semibold mb-4">
+                ❓ Common Questions
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400">
+                Quick answers to questions about working with me
+              </p>
+            </div>
+
+            <div className="space-y-4" itemScope itemType="https://schema.org/FAQPage">
+              {faqItems.map((faq, index) => (
+                <div
+                  key={index}
+                  className="bg-white dark:bg-slate-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow border border-slate-100 dark:border-slate-700"
+                  itemScope
+                  itemProp="mainEntity"
+                  itemType="https://schema.org/Question"
+                >
+                  <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-3" itemProp="name">
+                    <span className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 flex items-center justify-center text-white text-sm font-bold">
+                      {index + 1}
+                    </span>
+                    {faq.question}
+                  </h3>
+                  <div itemScope itemProp="acceptedAnswer" itemType="https://schema.org/Answer">
+                    <p className="text-slate-600 dark:text-slate-400 ml-11 leading-relaxed" itemProp="text">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section - Enhanced */}
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600">
+          <div className="max-w-4xl mx-auto text-center text-white">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+              Ready to Dominate Search Results?
+            </h2>
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Let's discuss how semantic SEO can transform your online presence and drive sustainable growth for your business.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-all duration-300 hover:scale-105 shadow-lg"
+              >
+                <span>Get Your Free SEO Audit</span>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center gap-2 bg-white/10 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-bold hover:bg-white/20 transition-all duration-300"
+              >
+                <span>View Success Stories</span>
+              </Link>
+            </div>
+            
+            {/* Trust Indicators */}
+            <div className="flex flex-wrap items-center justify-center gap-8 mt-12 pt-8 border-t border-white/20">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">⚡</span>
+                <span className="text-blue-100">24-Hour Response</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">🔒</span>
+                <span className="text-blue-100">100% Confidential</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-2xl">💯</span>
+                <span className="text-blue-100">No Obligation</span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  )
+}

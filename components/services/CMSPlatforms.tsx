@@ -1,0 +1,158 @@
+'use client';
+
+export default function CMSPlatforms() {
+  const platforms = [
+    {
+      name: 'WordPress SEO',
+      slug: 'wordpress-seo',
+      description: 'Complete WordPress SEO optimization including plugins, themes, and custom solutions',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 122.52 122.523" fill="currentColor">
+          <g>
+            <path d="M8.708,61.26c0,20.802,12.089,38.779,29.619,47.298L11.354,33.331C9.674,41.833,8.708,50.729,8.708,61.26z"/>
+            <path d="M96.74,58.608c0-6.495-2.333-10.993-4.334-14.494c-2.664-4.329-5.161-7.995-5.161-12.324c0-4.831,3.664-9.328,8.825-9.328c0.233,0,0.454,0.029,0.681,0.042c-9.35-8.566-21.807-13.796-35.489-13.796c-18.36,0-34.513,9.42-43.91,23.688c1.233,0.037,2.395,0.063,3.382,0.063c5.497,0,14.006-0.667,14.006-0.667c2.833-0.167,3.167,3.994,0.337,4.329c0,0-2.847,0.335-6.015,0.501l19.138,56.925l11.501-34.493l-8.188-22.434c-2.83-0.166-5.511-0.501-5.511-0.501c-2.832-0.166-2.5-4.496,0.332-4.329c0,0,8.679,0.667,13.843,0.667c5.496,0,14.006-0.667,14.006-0.667c2.835-0.167,3.168,3.994,0.337,4.329c0,0-2.853,0.335-6.015,0.501l18.992,56.494l5.242-17.517C95.719,73.773,96.74,64.537,96.74,58.608z"/>
+            <path d="M62.184,65.857l-15.768,45.819c4.708,1.384,9.687,2.141,14.846,2.141c6.12,0,11.989-1.058,17.452-2.979c-0.141-0.225-0.269-0.464-0.374-0.724L62.184,65.857z"/>
+            <path d="M107.376,36.046c0.226,1.674,0.354,3.471,0.354,5.404c0,5.333-0.996,11.328-3.996,18.824l-16.053,46.413c15.624-9.111,26.133-26.038,26.133-45.426C113.814,51.994,111.465,43.494,107.376,36.046z"/>
+            <path d="M61.262,0C27.483,0,0,27.481,0,61.26c0,33.783,27.483,61.263,61.262,61.263c33.778,0,61.265-27.48,61.265-61.263C122.526,27.481,95.04,0,61.262,0z M61.262,119.715c-32.23,0-58.453-26.222-58.453-58.455c0-32.23,26.222-58.451,58.453-58.451c32.229,0,58.45,26.221,58.45,58.451C119.712,93.493,93.491,119.715,61.262,119.715z"/>
+          </g>
+        </svg>
+      ),
+    },
+    {
+      name: 'Shopify SEO',
+      slug: 'shopify-seo',
+      description: 'E-commerce SEO for Shopify stores with product optimization and schema markup',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16.373 4.618c-.356-.139-.634-.185-.973-.185-.046 0-.092.046-.139.046l-.047-.092c-.277-.51-.695-.741-1.204-.741-.602 0-1.25.37-1.85.973-.509.51-.927 1.157-1.157 1.805-.695.231-1.157.37-1.204.37-.37.139-.37.139-.417.51 0 .047-.047.463-.092 1.157-.185 0-.324.046-.509.046-1.065.093-1.85.879-2.083 1.944-.232 1.018.278 1.944 1.25 2.547.185.139.417.277.648.37-.093.51-.139.973-.139 1.528 0 3.426 2.13 6.388 5.324 7.406 1.065.324 2.222.463 3.333.463 4.213 0 7.5-2.824 7.5-6.48 0-2.222-1.296-3.611-3.38-3.611-.973 0-1.758.324-2.361.973-.556.556-.834 1.389-.695 2.222.093.602.324 1.018.695 1.481.231.277.51.51.88.741-.417.602-1.25.973-2.13.973-1.806 0-3.24-1.574-3.24-3.61 0-.231.046-.509.093-.787.463-1.574 1.25-2.592 2.268-2.916.185-.046.417-.046.602-.046l.093.046c.463.232.834.37 1.297.37.463 0 .834-.139 1.157-.417.324-.277.51-.695.556-1.157.093-.695-.185-1.343-.741-1.805-.185-.139-.417-.278-.695-.417zm-.88 2.732c-.046.046-.092.092-.139.092-.092 0-.185 0-.324-.046-.046 0-.139-.046-.231-.092l-.046-.046c.046-.232.139-.51.277-.787.046-.092.092-.185.139-.277.046-.046.092-.092.139-.139.046-.046.092-.092.139-.092.046 0 .092 0 .139.046.046 0 .092.046.139.092.092.092.139.185.139.324 0 .092-.046.185-.092.277-.046.046-.139.139-.185.185z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Wix SEO',
+      slug: 'wix-seo',
+      description: 'Wix SEO services including technical optimization and content strategy',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13.444 6.838l1.087-2.535a.536.536 0 01.986 0l1.087 2.535 2.535 1.088a.536.536 0 010 .986l-2.535 1.087-1.087 2.535a.536.536 0 01-.986 0l-1.087-2.535-2.535-1.087a.536.536 0 010-.986l2.535-1.088zM4.917 15.001l1.358-3.168a.67.67 0 011.231 0l1.358 3.168 3.168 1.359a.67.67 0 010 1.231l-3.168 1.358-1.358 3.168a.67.67 0 01-1.231 0l-1.358-3.168-3.168-1.358a.67.67 0 010-1.231l3.168-1.359zM16.277 15.001l1.358-3.168a.67.67 0 011.231 0l1.358 3.168 3.168 1.359a.67.67 0 010 1.231l-3.168 1.358-1.358 3.168a.67.67 0 01-1.231 0l-1.358-3.168-3.168-1.358a.67.67 0 010-1.231l3.168-1.359z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Squarespace SEO',
+      slug: 'squarespace-seo',
+      description: 'Squarespace SEO optimization with custom code injections and integrations',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M16.035 5.964a3.498 3.498 0 00-4.95 0l-5.12 5.12a3.498 3.498 0 000 4.95l.707.707 1.414-1.414-.707-.707a1.498 1.498 0 010-2.121l5.12-5.12a1.498 1.498 0 012.122 0 1.498 1.498 0 010 2.121l-5.12 5.12a1.498 1.498 0 01-2.122 0 1.498 1.498 0 010-2.121l5.12-5.12a3.498 3.498 0 014.95 0 3.498 3.498 0 010 4.95l-5.12 5.12a3.498 3.498 0 01-4.95 0 3.498 3.498 0 010-4.95l5.12-5.12a1.498 1.498 0 012.122 0 1.498 1.498 0 010 2.121l-5.12 5.12-.707.707 1.414 1.414.707-.707 5.12-5.12a3.498 3.498 0 000-4.95z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Webflow SEO',
+      slug: 'webflow-seo',
+      description: 'Webflow SEO with clean code optimization and CMS structure improvements',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M13.5 12.734c.195.732.39 1.464.586 2.197.195.732.39 1.464.586 2.195h.002c.195.732.39 1.464.586 2.197.195-.733.39-1.465.586-2.197h.001c.195-.732.39-1.464.586-2.195.195-.732.39-1.464.586-2.197H14.08c-.195.732-.39 1.465-.58 2.2zM8.875 5.25s-1.46 6.783-1.753 8.119c-.293-1.336-1.754-8.119-1.754-8.119H2.062c.879 4.062 2.344 10.84 2.344 10.84s1.465-6.778 1.758-8.119c.293 1.34 1.753 8.119 1.753 8.119h3.305s2.344-10.84 2.344-10.84h-3.306s-1.093 5.067-1.385 6.403c-.293-1.336-1.754-8.119-1.754-8.119H3.816L8.875 5.25zm13.063 0s-1.46 6.783-1.753 8.119c-.293-1.336-1.754-8.119-1.754-8.119h-3.305c.879 4.062 2.344 10.84 2.344 10.84s1.465-6.778 1.758-8.119c.293 1.34 1.753 8.119 1.753 8.119h3.306s2.343-10.84 2.343-10.84h-3.306s-1.093 5.067-1.386 6.403c-.293-1.336-1.754-8.119-1.754-8.119h-3.305l5.059 8.119z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Magento SEO',
+      slug: 'magento-seo',
+      description: 'Enterprise Magento SEO for large-scale e-commerce optimization',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2L3 7.5v9L12 22l9-5.5v-9L12 2zm0 1.68l7.5 4.59v7.46L12 20.32l-7.5-4.59V8.27L12 3.68zm0 1.82L6 9.09v5.82L12 18.5l6-3.59V9.09L12 5.5z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Drupal SEO',
+      slug: 'drupal-seo',
+      description: 'Drupal SEO services with module optimization and performance tuning',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.262 1.157c-.106.1-2.746 2.746-3.377 3.39-.631.644-1.65 1.75-2.268 2.455-.618.706-1.413 1.684-1.772 2.179-.359.494-.826 1.154-1.037 1.467-.212.312-.563.888-.783 1.282-.22.393-.531 1.017-.689 1.386-.158.37-.392.985-.52 1.366-.127.38-.302.962-.383 1.294-.081.331-.173.93-.202 1.334-.029.403-.029 1.012 0 1.353.029.341.115.935.191 1.318.076.383.238.99.36 1.353.122.362.346.96.497 1.33.152.369.416.935.584 1.258.168.322.473.828.677 1.127.204.299.577.773.83 1.055.253.282.715.752 1.028 1.047.313.294.865.75 1.226 1.016.361.265.982.658 1.38.872.398.214 1.068.51 1.488.658.42.148 1.095.328 1.5.4.405.074 1.051.137 1.436.14.385.004 1.031-.057 1.436-.136.405-.078 1.065-.242 1.463-.369.399-.127 1.051-.378 1.447-.558.396-.18 1.037-.519 1.425-.755.388-.235.943-.613 1.234-.841.29-.228.767-.655 1.062-.967.294-.313.773-.863 1.064-1.22.29-.358.682-.91.872-1.229.19-.32.501-.922.691-1.334.19-.413.458-1.114.595-1.555.137-.441.312-1.113.387-1.492.076-.379.159-.956.185-1.273.026-.317.012-1.088-.031-1.713-.044-.625-.172-1.338-.287-1.584-.115-.246-.33-.624-.476-.841-.146-.217-.437-.603-.646-.859-.209-.255-.575-.547-.812-.648-.237-.101-.59-.255-.783-.342-.193-.087-.529-.212-.748-.278-.219-.066-.548-.157-.731-.202-.183-.045-.49-.101-.683-.124-.193-.023-.577-.046-.853-.05-.276-.005-.728.009-.994.03-.266.021-.707.066-.98.099-.273.033-.749.107-1.058.163-.309.056-.813.165-1.12.242-.307.077-.808.227-1.114.334-.306.107-.798.28-1.094.386-.296.106-.716.285-.934.399-.218.114-.571.298-.784.41-.213.112-.563.318-.778.458-.215.14-.535.382-.711.54-.176.157-.42.383-.542.503-.122.12-.304.289-.404.376z"/>
+        </svg>
+      ),
+    },
+    {
+      name: 'Joomla SEO',
+      slug: 'joomla-seo',
+      description: 'Joomla SEO optimization with extension management and URL structure',
+      icon: (
+        <svg className="w-12 h-12" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12.097 18.545l-1.371 1.371c-.974.974-2.553.974-3.527 0l-4.218-4.218c-.974-.974-.974-2.553 0-3.527l1.371-1.371 1.987 1.987-1.371 1.371c-.166.166-.166.435 0 .601l4.218 4.218c.166.166.435.166.601 0l1.371-1.371 1.987 1.987-.048-.048zm-5.437-5.437L4.673 11.12l1.371-1.371c.166-.166.435-.166.601 0l4.218 4.218c.166.166.166.435 0 .601l-1.371 1.371-1.987-1.987 1.371-1.371c.166-.166.166-.435 0-.601l-4.218-4.218c-.166-.166-.435-.166-.601 0l-1.371 1.371-1.987-1.987L1.77 5.179z"/>
+        </svg>
+      ),
+    },
+  ];
+
+  return (
+    <section className="relative py-28 bg-gradient-to-br from-indigo-950 via-purple-900 to-blue-950 overflow-hidden">
+      {/* Animated background orbs */}
+      <div className="absolute top-20 left-20 w-[500px] h-[500px] bg-cyan-500/20 rounded-full blur-3xl animate-blob" />
+      <div className="absolute bottom-20 right-20 w-[500px] h-[500px] bg-purple-500/20 rounded-full blur-3xl animate-blob animation-delay-2000" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/20 rounded-full blur-3xl animate-pulse-aura" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-md border border-cyan-400/30 mb-6">
+            <svg className="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd"/>
+            </svg>
+            <span className="text-sm font-bold text-cyan-300">Platform Expertise</span>
+          </div>
+          <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+            I optimize <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">All Major CMS</span>
+          </h2>
+          <p className="text-xl text-slate-200 max-w-3xl mx-auto">
+            Expert SEO services tailored to your specific platform with deep technical knowledge
+          </p>
+        </div>
+
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {platforms.map((platform, index) => (
+            <a
+              key={index}
+              href={`/services/${platform.slug}`}
+              className="group animate-slide-up"
+              style={{ animationDelay: `${index * 50}ms` } as React.CSSProperties}
+            >
+              <div className="h-full p-8 rounded-2xl bg-white/5 backdrop-blur-md border-2 border-slate-700/50 hover:border-cyan-400/50 hover:bg-white/10 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500 hover:-translate-y-2">
+                <div className="text-cyan-400 mb-6 flex justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                  {platform.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 text-center group-hover:text-cyan-300 transition-colors">
+                  {platform.name}
+                </h3>
+                <p className="text-sm text-slate-300 leading-relaxed text-center mb-4">
+                  {platform.description}
+                </p>
+                <div className="flex items-center justify-center gap-2 text-sm text-cyan-400 font-medium group-hover:gap-3 transition-all">
+                  <span>Learn More</span>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-12 text-center animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 backdrop-blur-md border border-cyan-400/30">
+            <svg className="w-5 h-5 text-cyan-300" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"/>
+            </svg>
+            <span className="text-sm font-bold text-cyan-300">
+              Don't see your platform? I work with custom-built and niche CMS platforms too!
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
